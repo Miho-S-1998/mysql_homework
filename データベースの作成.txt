@@ -1,0 +1,4 @@
+--データベースの作成
+
+CREATE DATABASE practice;
+

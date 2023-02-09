@@ -1,0 +1,16 @@
+--ER図のCREATE文
+CREATE TABLE IF NOT EXISTS `mydb`.`diary` (
+  `id` INT NOT NULL,
+  `user_id` INT NOT NULL,
+  `pulished_on` DATE NOT NULL,
+  `title` VARCHAR(20) NOT NULL,
+  `temperature` DECIMAL(3,1) NULL,
+  `content` TEXT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_diary_user_idx` (`user_id` ASC) VISIBLE,
+  CONSTRAINT `fk_diary_user`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `mydb`.`user` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB

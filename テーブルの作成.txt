@@ -1,0 +1,14 @@
+--データベースの選択
+USE practice;
+
+--テーブルの作成
+CREATE TABLE diary(
+    id INTEGER PRIMARY KEY,            
+    published_on DATE UNIQUE NOT NULL, 
+    title VARCHAR(31) NOT NULL,        
+    temperature DECIMAL(3,1),         
+    content TEXT　　　　　　　　　　　
+    );
+
+--テーブルの表示
+SHOW tables;

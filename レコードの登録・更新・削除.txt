@@ -1,0 +1,17 @@
+--レコードの登録
+INSERT INTO diary(id,published_on,title,temperature,content)
+    -> VALUES(1,20230207,'sql',20.3,'data');
+    -> (2,20230101,'sql_2',20.5,'special');
+
+--レコードの更新
+ UPDATE diary SET content='data_2'
+ WHERE id=2;
+
+--値の更新
+ UPDATE diary SET temperature=temperature+1
+    -> WHERE id=1;
+
+--レコードの削除
+ DELETE FROM diary
+ -> WHERE id=2;
+
